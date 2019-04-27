@@ -1,0 +1,52 @@
+.wrap_01 dt{text-align: center; font-size: 30px; color: #335a96; position: relative; padding: 45px 0 25px; margin-bottom: 45px; line-height: 30px;}
+.wrap_01 dt::after{ width: 74px; height: 1px; content: ''; position: absolute; left: 50%; bottom: 0; margin-left: -37px; background-color: #2b3b4b;}
+.wrap_01 dd{background-color: #f1f1f1; padding: 25px 20px; display: flex; justify-content: space-between; align-items: flex-start;}
+.wrap_01 dd >img{ width: 408px;}
+.wrap_01 dd div{ padding-top: 40px; font-size: 18px; line-height: 36px; color: #335a96; width: 570px; padding-right: 80px;}
+.wrap_01 dd div h3{ padding-bottom: 40px; color: #ca1830; font-weight: bold;}
+
+.wrap_02{ padding: 20px 20px 20px 0; display: flex; justify-content: space-between; align-items: flex-start;}
+.rightWrap{ background-color: #f1f1f1; padding-bottom: 20px; width: 254px;}
+.leftWrap{ width: 839px;}
+.leftWrap dl{ margin: 40px 35px 0; font-size: 18px; line-height: 36px; color: #335a96;}
+.leftWrap dl dt{ font-size: 20px; color: #5f5f5f;}
+.leftWrap dl.lw_top{ border-bottom: 1px solid #335a96; padding-bottom: 40px;}
+.lw_top dd{ display: flex; justify-content: flex-start; align-items: center;}
+.lw_top dd::before{ content: ''; width: 9px; height: 9px; border-radius: 50%; margin-right: 5px; background-color: #335a96;}
+.lw_time dd{ color: #db0505;}
+.lw_confirme dd{ color: #5f5f5f; font-size: 16px; float: left; width: 50%;}
+.leftWrap dl.lw_confirme{ overflow: hidden;}
+.lw_local dd{ color: #5f5f5f;}
+.leftWrap .lw_contact{ margin-left: 0; margin-right: 0; padding: 15px 20px; border: 1px solid #335a96; font-size: 18px; line-height: 48px;box-sizing: border-box;}
+.leftWrap .lw_contact dd{ display: flex; justify-content: flex-start; align-items: center; color: #5f5f5f;}
+.leftWrap .lw_contact span{ margin-right: 10px; display: inline-block; width: 30px; text-align: center;}
+.leftWrap .lw_contact span img{ vertical-align: middle;}
+
+.timeInfo{ background-color: #2980b9; padding: 20px 15px 15px; text-align: center;}
+.timeInfo >p{ font-size: 20px; color: #fff; border-bottom: 1px solid #fff; padding: 15px; margin-bottom: 10px;}
+.timeInfo >div{ color: #fff; display: flex; justify-content: flex-start; align-items: flex-start; text-align: left; line-height: 28px; font-size: 18px;}
+.rightBar{ padding-top: 22px;}
+.rightBar a{ display: block; width: 100%; height: 42px; line-height: 42px; text-indent: 35px; font-size: 18px; color: #9a9a9a;}
+.rightBar a.now{ background-color: #dcdbde;}
+.rightBar a.rightBarBtn{ text-indent: 0; text-align: center; margin: 15px 0;}
+
+.wrap_03{ display: flex; justify-content: space-between; align-items: flex-start; padding-top: 35px;}
+.wrap_03 .wrap_01{ margin-top: 0;}
+.wrap_03 dl dt{ font-weight: bold;}
+.wrap_03 dl dd,.wrap_03 dl dt{ color: #5f5f5f;}
+.wrap_03 .wrap_01 dt{ padding-top: 0; color: #2980b9; padding-bottom: 15px;}
+
+.form .selectP { display: flex; justify-content: flex-start; align-items: flex-start;}
+.form .selectP label{ display: flex; justify-content: flex-start; align-items: center; position: relative; margin-right: 50px;}
+.form .selectP label input{ opacity: 0; position: absolute; left: 0; top: 0;}
+.form .selectP label span{ width: 14px; height: 14px; border-radius: 50%; border: 1px solid #335a96; background-color: #f1f2f7; margin-left: 15px;}
+.form .selectP label span.now{ background-color: #2980b9;}
+.form dd{ display: flex; justify-content: flex-start; align-items: center; margin-bottom: 15px;}
+.form dd span{ width: 170px;}
+.form dd input{ height: 30px; line-height: 30px; flex: 1; background-color: #f1f2f7; border: 1px solid #335a96; text-indent: 1em;}
+
+#textMsg{ width: 100%; background-color: #f1f2f7; border: 1px solid #335a96; resize: none; height: 280px; padding: 10px;}
+.btns dd{ display: flex; justify-content: flex-end; align-items: center; margin-top: 37px;}
+.btns a{margin-left: 135px; text-align: center; color: #fff; font-weight: bold; height: 45px; line-height: 45px; text-transform: uppercase;}
+.ok{ width: 165px; background-color: #2980b9;}
+.reset{ width: 277px; background-color: #d87f2a;}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=yes">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>兰州大学</title>
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+    <!-- 顶部logo -->
+    <div class="head wrap">
+        <a href="#"><h1>International Workshop on Chemistry-Climate Interactions</h1></a>
+    </div>
+    <!-- 导航 -->
+    <div class="nav">
+        <div class="navInner wrap">
+            <a href="#">Announcement</a>
+            <a href="#">Travel</a>
+            <a href="#">Accommodations</a>
+            <a href="#">Visa Requirements</a>
+            <a href="#">Sponsors</a>
+            <a href="#">Venue</a>
+            <a href="#">Agenda</a>
+            <a href="#">Poster Information</a>
+            <a href="#">Participants</a>
+        </div>
+    </div>
+    <!-- 内容 -->
+    
+    <div class="wrap wrap_03">
+        <form action="" class="form">
+            <div class="leftWrap">
+                <dl class="wrap_01">
+                    <dt>
+                        <span>Registration</span>
+                    </dt>
+                </dl>
+                <dl>
+                    <dt>WORKSHOP REGISTRATION FORM:</dt>
+                </dl>
+                <dl>
+                    <dd class="selectP">
+                        <label>Miss <input type="radio" data-type="person" name="person" checked="checked" value="Miss"> <span></span></label>
+                        <label>Mrs <input type="radio" data-type="person" name="person" value="Mrs"> <span></span></label>
+                        <label>Mr <input type="radio" data-type="person" name="person" value="Mr"> <span></span></label>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd><span>Title:*</span><input type="text" data-type="Title"></dd>
+                    <dd><span>Surname:*</span><input type="text" data-type="Surname"></dd>
+                    <dd><span>First name:*</span><input type="text" data-type="FirstName"></dd>
+                    <dd><span>Institute/Company:*</span><input type="text" data-type="Institute"></dd>
+                    <dd><span>E-mail:*</span><input type="text" data-type="Email"></dd>
+                    <dd><span>Address:	</span><input type="text" data-type="Address"></dd>
+                    <dd><span>City:</span><input type="text" data-type="City"></dd>
+                    <dd><span>Zip code:</span><input type="text" data-type="Zip"></dd>
+                    <dd><span>Country:	</span><input type="text" data-type="Country"></dd>
+                </dl>
+                <dl>
+                    <dt>Abstract (500 characters max):*</dt>
+                    <dd><textarea name="" id="textMsg" cols="30" rows="10" data-type="Abstract"></textarea></dd>
+                </dl>
+                <dl class="btns">
+                    <dd>
+                        <a href="javascript:;" class="ok">OK</a>
+                        <a href="javascript:;" class="reset">Upload attachments</a>
+                    </dd>
+                    
+                </dl>
+            </div>
+        </form>
+        <div class="rightWrap">
+            <div class="timeInfo">
+                <img src="imgs/icon_01.png" alt="">
+                <p>16-18 October 2019 </p>
+                <div>
+                    <span>Venue: </span>
+                    <p>Lanzhou University, Lanzhou, China</p>
+                </div>
+            </div>
+            <div class="rightBar">
+                <a class="now">Announcement</a>
+                <a>Travel</a>
+                <a>Accommodations</a>
+                <a>Visa Requirements</a>
+                <a>Sponsors</a>
+                <a>Venue</a>
+                <a>Agenda</a>
+                <a>Poster Information</a>
+                <a>Participants</a>
+                <a href="" class="rightBarBtn"><img src="imgs/icon_06.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+    <script>
+        $(function(){
+            var submitData={};
+            var checkedEle = $("input[type='radio']:checked");
+            var checkedVal = checkedEle.val();
+            checkedEle.siblings("span").addClass('now');
+            submitData['person'] = checkedVal;
+            $("input[type='radio']").change(function(){
+                submitData['person'] = $(this).val();
+                $(this).siblings("span").addClass('now').parents('label').siblings('label').find('span').removeClass('now');
+            })
+            $(".ok").click(function(){
+                var eles = $('.form input,textarea');
+                for(var i=0;i<eles.length;i++){
+                    var type = eles.eq(i).attr('data-type');
+                    var val = eles.eq(i).val();
+                    
+                    if(val==''){
+                        if(type=="Title"||type=="Surname"||type=="FirstName"||type=="Institute"||type=="Email"||type=="Abstract"){
+                            alert(type+" is not Data")
+                            return
+                        }else{
+                            submitData[eles.eq(i).attr('data-type')]=eles.eq(i).val();
+                        }
+                    }else{
+                        if(type=="Email"){
+                            var reg = /^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/;
+                            if(!reg.test(val)){
+                                alert("Email is error")
+                            }
+                        }
+                        submitData[eles.eq(i).attr('data-type')]=eles.eq(i).val();
+                    }
+                }
+                //TODO:发起请求
+                console.log(submitData)
+            });
+        })
+    </script>
+</body>
+</html>
