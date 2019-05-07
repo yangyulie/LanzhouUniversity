@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0,user-scalable = no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=yes">
     <link rel="stylesheet" href="css/common.css">
@@ -13,7 +13,17 @@
 <body>
     <!-- 顶部logo -->
     <div class="head wrap">
-        <a href="#"><h1>International Workshop on Chemistry-Climate Interactions</h1></a>
+        <a href="#"><h1>International Workshop <br> on Chemistry-Climate Interactions</h1></a>
+        <img src="imgs/icon_07.png" class="navBtn" alt="">
+    </div>
+    <div class="timeBox">
+        <div class="timeInfo">
+            <img src="imgs/icon_01.png" alt="">
+            <div>
+                <p><span>Dates: </span>16-18 October 2019 </p>
+                <p><span>Venue: </span>Lanzhou University, Lanzhou, China</p>
+            </div>
+        </div>
     </div>
     <!-- 导航 -->
     <div class="nav">
@@ -59,6 +69,7 @@
                     <dd><span>City:</span><input type="text" data-type="City"></dd>
                     <dd><span>Zip code:</span><input type="text" data-type="Zip"></dd>
                     <dd><span>Country:	</span><input type="text" data-type="Country"></dd>
+                    <dd><span>Article:*	</span><input type="text" data-type="Article"></dd>
                 </dl>
                 <dl>
                     <dt>Abstract (500 characters max):*</dt>
@@ -99,6 +110,14 @@
     <div class="footer"></div>
     <script>
         $(function(){
+            $('.navBtn').click(function(){
+                var isShow = $('.nav').hasClass('show');
+                if(isShow){
+                    $('.nav').removeClass('show');
+                }else{
+                    $('.nav').addClass('show');
+                }
+            });
             var submitData={};
             var checkedEle = $("input[type='radio']:checked");
             var checkedVal = checkedEle.val();
@@ -115,7 +134,15 @@
                     var val = eles.eq(i).val();
                     
                     if(val==''){
-                        if(type=="Title"||type=="Surname"||type=="FirstName"||type=="Institute"||type=="Email"||type=="Abstract"){
+                        if(type=="Abstract" && $('input[data-type="Article"]').val()==''){
+                            alert(type+" or Article is not Data")
+                            return
+                        }
+                        if(type=="Article" && $('input[data-type="Abstract"]').val()==''){
+                            alert(type+" or Abstract is not Data")
+                            return
+                        }
+                        if(type=="Title"||type=="Surname"||type=="FirstName"||type=="Institute"||type=="Email"){
                             alert(type+" is not Data")
                             return
                         }else{

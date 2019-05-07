@@ -2,22 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0,user-scalable = no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=yes">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.js"></script>
     <title>兰州大学</title>
 </head>
 <body>
     <!-- 顶部logo -->
     <div class="head wrap">
-        <a href="#"><h1>International Workshop on Chemistry-Climate Interactions</h1></a>
+        <a href="#"><h1>International Workshop <br> on Chemistry-Climate Interactions</h1></a>
+        <img src="imgs/icon_07.png" class="navBtn" alt="">
+    </div>
+    <div class="timeBox">
+        <div class="timeInfo">
+            <img src="imgs/icon_01.png" alt="">
+            <div>
+                <p><span>Dates: </span>16-18 October 2019 </p>
+                <p><span>Venue: </span>Lanzhou University, Lanzhou, China</p>
+            </div>
+        </div>
     </div>
     <!-- 导航 -->
     <div class="nav">
         <div class="navInner wrap">
-            <a href="#">Announcement</a>
+            <a href="#" class="now">Announcement</a>
             <a href="#">Travel</a>
             <a href="#">Accommodations</a>
             <a href="#">Visa Requirements</a>
@@ -134,5 +145,17 @@
         </div>
     </div>
     <div class="footer"></div>
+    <script>
+        $(function(){
+            $('.navBtn').click(function(){
+                var isShow = $('.nav').hasClass('show');
+                if(isShow){
+                    $('.nav').removeClass('show');
+                }else{
+                    $('.nav').addClass('show');
+                }
+            });
+        })
+    </script>
 </body>
 </html>

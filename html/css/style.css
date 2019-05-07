@@ -50,3 +50,39 @@
 .btns a{margin-left: 135px; text-align: center; color: #fff; font-weight: bold; height: 45px; line-height: 45px; text-transform: uppercase;}
 .ok{ width: 165px; background-color: #2980b9;}
 .reset{ width: 277px; background-color: #d87f2a;}
+
+@media screen and (max-width:1139px){
+    .wrap_01 dt{ font-size: .3rem; padding: .3rem 0; margin-bottom: .3rem;}
+    .wrap_01 dd{ padding: .25rem .2rem; flex-direction: column;}
+    .wrap_01 dd >img{ max-width: 100%; width: 4.08rem; order: 1; display: block; margin: .3rem auto;}
+    .wrap_01 dd div{ order: 0; width: 100%; padding: 0; font-size: .16rem; line-height: .3rem;}
+    .wrap_01 dd div h3{ font-size: .2rem; padding-bottom: .4rem;}
+    .leftWrap dl{ margin: 0; padding: .3rem .25rem; font-size: .16rem; line-height: .3rem;}
+    .wrap_02{ padding: 0;}
+    .leftWrap dl dt{ font-size: .2rem; font-weight: bold;}
+    .lw_top dd{ align-items: flex-start; margin-top: .1rem;}
+    .lw_top dd::before{ margin-top: .08rem;}
+    .leftWrap dl.lw_confirme{ padding-top: 0; padding-bottom: 0;}
+    .lw_confirme dd{ width: 100%; font-size: .16rem;}
+    .leftWrap .lw_contact{ border: 0; background-color: #f1f1f1; font-size: .18rem; color: #5f5f5f; line-height: .36rem;}
+    .leftWrap .lw_contact dd{ align-items: flex-start; margin-top: .2rem;}
+    .leftWrap .lw_contact span{ width: .3rem;}
+    .leftWrap .lw_contact span img{ max-width: 100%;}
+    .leftWrap{ width: 100%;}
+    .form dd span{ width: 1.7rem;}
+    .btns a{ margin-left: .5rem;}
+    .reset{ width: 2.77rem;}
+    .ok{ width: 1.65rem;}
+    .form{ width: 100%;}
+    .btns dd{ margin-top: 0;}
+    .leftWrap dl{ padding-bottom: 0;}
+    .leftWrap dl.btns{ padding-top: 0;}
+    .wrap_03 dl dd img{ max-width: 100%;}
+    .wrap_03{ padding-top: .3rem;}
+    .form dd{ margin-bottom: .15rem;}
+}
+
+
+
+
+

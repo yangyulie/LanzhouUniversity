@@ -65,8 +65,51 @@ textarea {overflow: auto;}
 .navInner{ display: flex; justify-content: space-around; align-items: center;}
 .navInner a{ font-size: 14px; color: #fff; line-height: 60px; text-transform: uppercase;}
 
-
-
+.navBtn{ display: none;}
+.head h1 br{ display: none;}
+.timeBox{ display: none;}
+@media screen and (max-width:1139px){
+    @media (min-width: 320px){
+        html{ font-size: 85.333px;}
+    }
+    @media (min-width: 360px){
+        html{ font-size: 96px;}
+    }
+    @media (min-width: 375px){
+        html{ font-size: 100px;}
+    }
+    @media (min-width: 414px){
+        html{ font-size: 110.4px;}
+    }
+    @media (min-width: 768px){
+        html{ font-size: 100px;}
+    }
+    :root{ font-size: calc(100/640*100vw);}
+    .wrap{
+        width: 100%; min-width: 100%
+    }
+    .head{
+        display: flex; justify-content: space-between; align-items: flex-end; padding: .22rem .22rem .2rem 0;
+    }
+    .head h1{
+        background-size: .85rem auto; font-size: .24rem; line-height: .36rem; padding:0 0 0 1.3rem; height: .85rem; margin: 0;
+    }
+    .head h1 br{ display: block;}
+    .navBtn{ display: block; width: .42rem; margin-bottom: .2rem;}
+    .nav{ display: none; position: fixed; top: 1rem; z-index: 3; min-width: auto; right: 0; background-color: #dcdbde; width: 2.45rem; height: auto;}
+    .navInner{ flex-direction: column;}
+    .navInner a{ font-size: .18rem; color: #9a9a9a; height: .48rem; border-bottom: .01rem solid #fff; width: 100%; text-align: left; padding-left: .2rem; line-height: .48rem;}
+    .navInner a.now{ color: #2980b9;}
+    .navInner a:last-child{ border: 0;}
+    .nav.show{ display: block;}
+    .footer{ width: 100%; min-width: 100%; margin-top: 1.5rem;}
+    .rightWrap{ display: none;}
+    .timeBox{ display: block; background-color: #335a96;}
+    .timeBox .timeInfo{ padding: .25rem .75rem; display: flex; justify-content: flex-start; align-items: flex-start;color: #fff; line-height: .36rem; font-weight: bold;}
+    .timeBox .timeInfo >div{ flex-direction: column; padding-left: .3rem; font-size: .18rem; }
+    .timeBox .timeInfo>img{ width: .38rem;}
+    
+}
 
 
 
